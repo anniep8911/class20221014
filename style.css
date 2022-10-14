@@ -1,0 +1,252 @@
+body{
+    overflow-x: hidden;
+}
+.hdrTopWrap{
+    background-color: #000;
+    color: #fff;
+}
+.hdrTopWrap .hdrTop{
+    width: 80%;
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    line-height: 40px;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+.hdrTopWrap nav{
+    display: flex;
+}
+.hdrTopWrap h4{
+    margin-left: 20px;
+}
+
+.hdrWrap{
+    background: linear-gradient(90deg, rgb(126, 114, 126) 0%, rgb(109, 100, 108) 100%);
+}
+.hdrWrap header{
+    width: 80%;
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    line-height: 80px;
+}
+.hdrWrap h1{
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.hdrWrap nav{
+    display: flex;
+    justify-content: space-between;
+}
+.hdrWrap h4{
+    margin-left: 20px;
+    text-transform: capitalize;
+}
+.cntWrap .content{
+    width: 80%;
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-top: 80px;
+
+}
+/* .cntWrap02 .content{
+    width: 100vw;
+    max-width: none;
+} */
+.content h2{
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 80px;
+    text-transform: capitalize;
+}
+.content header p{
+    font-size: 14px;
+    line-height: 20px;
+    height: 40px;
+    overflow: hidden;
+}
+
+.content section{
+    margin-top: 40px;
+}
+.content h3{
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.content h5{
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 40px;
+    height: 40px;
+    overflow: hidden;   
+}
+.content article p{
+    font-size: 14px;
+    line-height: 20px;
+    height: 80px;
+    overflow: hidden;
+}
+.content article i{
+    font-size: 16px;
+    line-height: 40px;
+}
+.content .image{
+    background-color: #ccc;
+}
+
+.content.cnt01 header{
+    width: calc(100% / 12 * 5);
+    margin: 0 auto;
+}
+.content.cnt01 section>div{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.content.cnt01 section .artTop article{
+    width: calc(50% - 20px);
+}
+.content.cnt01 .artTop .texts{
+    padding: 20px calc(100% / 6 * 1.8) 0 calc(100% / 6 * 0.5);
+}
+.content.cnt01 .artTop .image{
+    height: 200px;
+}
+.content.cnt01 section .artBtm article{
+    width: calc(100% / 3 - 20px);
+}
+.content.cnt01 section .artBtm{
+    margin-top: 40px;
+}
+.content.cnt01 section .artBtm .texts{
+    padding: 20px 10px 0px;
+    text-align: center;
+}
+.content.cnt01 section .artBtm .image{
+    height: 150px;
+}
+
+div.content.cnt02 header{
+    width: 100vw;
+    margin-left: min(calc((100vw - 1080px)/-2),calc((100vw - 80vw)/-2));
+    background-color: purple;
+    color: #fff;
+    padding: 40px 0 180px;
+}
+div.content.cnt02 header p{
+    width: calc(80% / 12 * 5);
+    margin: 0 auto;
+    text-align: center;
+    max-width: 500px;
+}
+div.content.cnt02 section{
+    width: 80%;
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-top: -120px;
+}
+div.content.cnt02 article{
+    display: flex;
+    background-color: #fff;
+    box-shadow: 2px 2px 4px #ccc;
+}
+div.content.cnt02 .image{
+    width: 50%;
+    height: 300px;
+}
+div.content.cnt02 .texts{
+    width: 50%;
+    padding: 40px 20px ;
+    text-align: center;
+}
+div.content.cnt02 .texts p{
+    height: 100px;
+}
+div.content.cnt02 .texts .btn{
+    width: calc(100% / 6 * 2 + 40px);
+    background-color: purple;
+    color: #fff;
+    margin: 0 auto;
+    line-height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+div.content.cnt03 section{
+    display: flex;
+    justify-content: space-between;
+}
+div.content.cnt03 article{
+    height: 240px;
+    width:calc(100% / 4 - 20px);
+    overflow: hidden;
+}
+div.content.cnt03 article:hover .texts{
+    margin-top: -240px;
+}
+div.content.cnt03 .image{
+    height: 240px;
+}
+div.content.cnt03 .texts{
+    background-color: rgba(255,255,255,0.7);
+    height: 240px;
+    transition: margin-top 0.5s;
+    padding: 20px;
+    text-align: center;
+}
+div.content.cnt03 .texts h3{
+    line-height: 80px;
+}
+
+i.bars{
+    width: 20px;
+    height: 15px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+}
+i.bars::after{
+    content:'';
+    height: 49%;
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #fff;
+}
+i.right_dir{
+    width: 20px;
+    height: 10px;
+    position: relative;
+    cursor: pointer;
+    margin-top: -20px;
+}
+i.right_dir::before{
+    width: 20px;
+    height: 1px;
+    content: '';
+    display: block;
+    background-color: #fff;
+    transform: rotate(-30deg);
+    transform-origin: top left;
+
+ 
+}
+i.right_dir::after{
+    width: 20px;
+    height: 1px;
+    content: '';
+    display: block;
+    background-color: #fff;
+    transform: rotate(30deg);
+    transform-origin: top left;
+
+
+}
+

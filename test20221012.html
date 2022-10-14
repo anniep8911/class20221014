@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <style>
+        .hdrTopWrap{
+            background-color: #333;
+        }
+        .hdrTop{
+            width: 80%;
+            max-width: 1080px;
+            color: #fff;
+            outline: 1px solid red;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            line-height: 40px;
+        }
+        .hdrTop nav{
+            display: flex;
+        }
+        .hdrTop nav h4{
+            margin-left: 20px;
+            text-transform: capitalize;
+            font-size: 14px;
+        }
+        .hdrTop .logos i{
+            font-size: 16px;
+        }
+        /* 공통영역 */
+        .cntWrap .content{
+            width: 80%;
+            max-width: 1080px;
+            margin: 0 auto;
+            margin-top: 160px;
+        }
+        .cntWrap .content header{
+            text-align: center;
+        }
+        .cntWrap .content header h2{
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: capitalize;
+            line-height: 80px;
+            
+        }
+        .cntWrap .content header p{
+            width: calc(100% / 12 * 4);
+            margin: 0 auto;
+            height: 40px;
+            overflow: hidden;
+            line-height: 20px;
+            font-size: 14px;
+        }
+        .cntWrap .content section{
+            margin-top: 80px;
+        }
+        .cntWrap .content section .image{
+            background-color: #ccc;
+        }
+        .cntWrap .content section .texts p{
+            line-height: 20px;
+            font-size: 14px;
+        }
+        .cntWrap .content section .texts h3{
+            font-weight: 700;
+            line-height: 40px;
+            font-size: 16px;
+            text-transform: capitalize;
+        }
+        .cntWrap .content section .texts h5{
+            line-height: 40px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+        
+        .cntWrap .content.cnt01 section>div{
+            display: flex;
+            justify-content: space-between;
+        }
+        .cntWrap .content.cnt01 .artTop article{
+            width: calc(50% - 20px);
+        }
+        .cntWrap .content.cnt01 .artTop .image{
+            height: 320px;
+        }
+        .cntWrap .content.cnt01 .artBtm{
+            margin-top: 40px;
+        }
+        .cntWrap .content.cnt01 .artBtm article{
+            width: calc(100% / 3 - 20px);
+        }
+        .cntWrap .content.cnt01 .artBtm .image{
+            height: 340px;
+        }
+        .cntWrap .content.cnt01 .artTop .texts{
+            padding: 20px calc(100% / 6 * 1.5) 0 calc(100% / 6 * 0.5);
+        }
+        .cntWrap .content.cnt01 .artBtm .texts{
+            padding: 20px;
+            text-align: center;
+        }
+        .cntWrap .content.cnt01 .artBtm .texts p, .cntWrap .content.cnt01 .artTop .texts p{
+            height: 80px;
+            overflow: hidden;
+        }
+
+        .cntWrap .content.cnt01 .artTop i,.cntWrap .content.cnt01 .artBtm i{
+            line-height: 40px;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        /* 방법 2번 
+        .cntWrap .content.cnt02 header{
+            background-color: darkorchid;
+            width: 100vw; 
+            margin-left:min(calc((100vw - 1080px) / -2),calc((100vw - 80vw) / -2));
+        }*/
+        /* 방법 1번 */
+        .cntWrap.cntWrap02 .content{
+            width: 100%;
+            max-width: none;
+        }
+        .cntWrap.cntWrap02 .content header{
+            background-color: cadetblue;
+            padding: 160px 0 280px;
+            color: #fff;
+        }
+        .cntWrap.cntWrap02 .content header p{
+            width: calc(80% / 12 * 8);
+            max-width: 700px;
+            
+        }
+        .cntWrap.cntWrap02 .content section{
+            width: 80%;
+            max-width: 1080px;
+            margin: 0 auto;
+            margin-top: -200px;
+            box-shadow: 2px 2px 4px #ccc;
+        }
+        .cntWrap.cntWrap02 .content article{
+            display: flex;
+            background-color: #fff;
+        }
+        .cntWrap.cntWrap02 .content article>div{
+            width: 50%;
+        }
+        .cntWrap.cntWrap02 .content article .texts{
+            padding: 80px calc(100% / 12);
+            text-align: center;
+        }
+        .cntWrap.cntWrap02 .content article .texts p{
+            height: 100px;
+            overflow: hidden;
+        }
+        .cntWrap.cntWrap02 .content article .texts .btn{
+            width: calc(100% / 4 * 2 + 20px);
+            cursor: pointer;
+            background-color: cadetblue;
+            line-height: 40px;
+            border-radius: 20px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        .content.cnt03 section{
+            display: flex;
+            justify-content: space-between;
+        }
+        .content.cnt03 section article{
+            width: calc(100% / 4 - 20px);
+            height: 240px;
+            overflow: hidden;
+        }
+        .content.cnt03 section article:hover .texts{
+            margin-top: -240px;
+        }
+        .content.cnt03 section article .image{
+            height: 240px;
+        }
+        .content.cnt03 section article .texts{
+            background-color: rgba(255,255,255,0.7);
+            padding: 40px 20px 60px;
+            text-align: center;
+            transition: margin-top 0.5s;
+        }
+        .content.cnt03 section article .texts p{
+            height: 80px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hdrTopWrap">
+        <div class="hdrTop">
+            <div class="logos">
+                <i class="fa-brands fa-html5"></i>
+                <i class="fa-brands fa-css3"></i>
+            </div>
+            <nav>
+                <h4>member</h4>
+                <h4>join us</h4>
+                <h4>contact</h4>
+            </nav>
+        </div>
+    </div>
+    <!-- <div class="hdrWrap">
+        <header>
+            <h1>logohere</h1>
+            <nav>
+                <h4>about</h4>
+                <h4>news</h4>
+                <h4>portfolio</h4>
+                <h4><i></i></h4>
+            </nav>
+        </header>
+    </div> -->
+    <div class="cntWrap">
+        <div class="content cnt01">
+            <header>
+                <h2>content title</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ratione, ipsa culpa earum alias, perspiciatis tempora, totam sint commodi rerum veniam fugit sapiente rem inventore odit quaerat. Adipisci, quas saepe.</p>
+            </header>
+            <section>
+                <div class="artTop">
+                    <article>
+                        <div class="image"></div>
+                        <div class="texts">
+                            <h3>segment title</h3>
+                            <h5>Lorem ipsum dolor sit amet consectetur</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ratione, ipsa culpa earum alias, perspiciatis tempora, totam sint commodi rerum veniam fugit sapiente rem inventore odit quaerat. Adipisci, quas saepe.</p>
+                            <div class="logos">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="image"></div>
+                        <div class="texts">
+                            <h3>segment title</h3>
+                            <h5>Lorem ipsum dolor sit amet consectetur</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ratione, ipsa culpa earum alias, perspiciatis tempora, totam sint commodi rerum veniam fugit sapiente rem inventore odit quaerat. Adipisci, quas saepe.</p>
+                            <div class="logos">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="artBtm">
+                    <article>
+                        <div class="image"></div>
+                        <div class="texts">
+                            <h3>segment title</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ratione, ipsa culpa earum alias, perspiciatis tempora, totam sint commodi rerum veniam fugit sapiente rem inventore odit quaerat. Adipisci, quas saepe.</p>
+                            <div class="logos">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="image"></div>
+                        <div class="texts">
+                            <h3>segment title</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ratione, ipsa culpa earum alias, perspiciatis tempora, totam sint commodi rerum veniam fugit sapiente rem inventore odit quaerat. Adipisci, quas saepe.</p>
+                            <div class="logos">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="image"></div>
+                        <div class="texts">
+                            <h3>segment title</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ratione, ipsa culpa earum alias, perspiciatis tempora, totam sint commodi rerum veniam fugit sapiente rem inventore odit quaerat. Adipisci, quas saepe.</p>
+                            <div class="logos">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="cntWrap cntWrap02">
+        <div class="content cnt02">
+            <header>
+                <h2>content title</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quia impedit nisi, fugit voluptas, sapiente asperiores dolores optio excepturi in odit ducimus fugiat vitae, pariatur perferendis ipsam distinctio illum? Laborum!</p>
+            </header>
+            <section>
+                <article>
+                    <div class="image"></div>
+                    <div class="texts">
+                        <h3>segment title</h3>
+                        <h5>Lorem ipsum dolor sit amet.</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, neque! Iste aperiam tenetur consectetur consequuntur exercitationem excepturi est qui voluptas repellendus accusamus, illum et dolorem libero amet quos eaque reprehenderit!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, neque! Iste aperiam tenetur consectetur consequuntur exercitationem excepturi est qui voluptas repellendus accusamus, illum et dolorem libero amet quos eaque reprehenderit!</p>
+                        <div class="btn">button</div>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </div>
+
+    <div class="cntWrap">
+        <div class="content cnt03">
+            <header>
+                <h2>content title</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, cupiditate rerum quo sequi odit labore harum saepe quos eligendi reprehenderit voluptatibus accusantium, soluta nostrum quasi beatae sapiente magni dolores. Tenetur!</p>
+            </header>
+            <section>
+                <article>
+                    <div class="image">
+                    </div>
+                    <div class="texts">
+                        <h3>segment title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, cupiditate rerum quo sequi odit labore harum saepe quos eligendi reprehenderit voluptatibus accusantium, soluta nostrum quasi beatae sapiente magni dolores. Tenetur!</p>
+                    </div>
+                </article>
+                <article>
+                    <div class="image">
+                    </div>
+                    <div class="texts">
+                        <h3>segment title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, cupiditate rerum quo sequi odit labore harum saepe quos eligendi reprehenderit voluptatibus accusantium, soluta nostrum quasi beatae sapiente magni dolores. Tenetur!</p>
+                    </div>
+                </article>
+                <article>
+                    <div class="image">
+                    </div>
+                    <div class="texts">
+                        <h3>segment title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, cupiditate rerum quo sequi odit labore harum saepe quos eligendi reprehenderit voluptatibus accusantium, soluta nostrum quasi beatae sapiente magni dolores. Tenetur!</p>
+                    </div>
+                </article>
+                <article>
+                    <div class="image">
+                    </div>
+                    <div class="texts">
+                        <h3>segment title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, cupiditate rerum quo sequi odit labore harum saepe quos eligendi reprehenderit voluptatibus accusantium, soluta nostrum quasi beatae sapiente magni dolores. Tenetur!</p>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </div>
+    <div class="ftrWrap">
+        <footer>
+            <div class="logo">logohere</div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus illo quod laboriosam obcaecati tenetur officiis ratione accusantium praesentium tempore, ipsam recusandae deserunt omnis, ab ex beatae aliquam laborum sapiente aut.</p>
+            <div class="logos">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
